@@ -1,29 +1,41 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { FaGoogle } from "react-icons/fa";
 
 
 const Login = () => {
-    const { handleLoginUser } = useContext(AuthContext);
+    const { handleLoginUser, handleLoginGoogle } = useContext(AuthContext);
+    const [error, setError] = useState('');
     const navigate = useNavigate();
 
     const handleLogin = e => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        
+
         handleLoginUser(email, password)
-        .then(result => {
-            console.log(result.user)
-            navigate('/')
-        })
-        .catch(err => {
-            console.log('ERROR', err.message);
-        })
+            .then(result => {
+                console.log(result.user)
+                navigate('/')
+            })
+            .catch(err => {
+                setError(err.message);
+            })
+    }
+    const handleGoogle = () => {
+        handleLoginGoogle()
+            .then(res => {
+                console.log(res.user);
+                navigate('/')
+            })
+            .catch(err => {
+                setError(err.message)
+            })
     }
 
     const handleForget = () => {
-        
+
     }
     return (
         <div className="hero bg-base-200">
@@ -51,8 +63,12 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
                         </div>
+                        {error && <p className="text-red-500 text-xs">{error}</p>}
                         <p>New to this website? please <Link to='/register' className="link">Register</Link></p>
                     </form>
+                    <button onClick={handleGoogle} className="btn mx-4 mb-8">
+                        <FaGoogle></FaGoogle> Login With Google
+                    </button>
                 </div>
             </div>
         </div>

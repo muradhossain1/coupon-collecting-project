@@ -1,11 +1,13 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 
 
 const Register = () => {
-    const { handleCreateUser, userProfileUpdate } = useContext(AuthContext);
+    const { handleCreateUser, userProfileUpdate, handleLoginGoogle } = useContext(AuthContext);
     const [error, setError] = useState('');
+    const [showPassword, setShowPassword] = useState(false)
     const navigate = useNavigate();
 
     const handleRegister = e => {
@@ -34,6 +36,16 @@ const Register = () => {
             setError(err.message)
         })
     }
+    const handleGoogle = () => {
+        handleLoginGoogle()
+            .then(res => {
+                console.log(res.user);
+                navigate('/')
+            })
+            .catch(err => {
+                setError(err.message)
+            })
+    }
     return (
         <div className="hero bg-base-200">
             <div className="hero-content flex-col">
@@ -60,11 +72,16 @@ const Register = () => {
                             </label>
                             <input type="email" name="email" placeholder="Email" className="input input-bordered" required/>
                         </div>
-                        <div className="form-control">
+                        <div className="form-control relative">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" name="password" placeholder="Password" className="input input-bordered" required />
+                            <input type={showPassword ? 'text':'password'} name="password" placeholder="Password" className="input input-bordered" required />
+                            <button onClick={() => setShowPassword(!showPassword)} className="absolute top-[52px] right-4">
+                                {
+                                    showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+                                }
+                            </button>
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Register</button>
@@ -72,6 +89,9 @@ const Register = () => {
                         {error && <p className="text-red-500 text-xs">{error}</p>}
                         <p>Already have an account? please <Link to='/login' className="link">Login</Link></p>
                     </form>
+                    <button onClick={handleGoogle} className="btn mx-4 mb-8">
+                        <FaGoogle></FaGoogle> Login With Google
+                    </button>
                 </div>
             </div>
         </div>
