@@ -10,7 +10,7 @@
                 "coupon_code": "MUSIC10",
                 "description": "10% off on all musical instruments.",
                 "expiry_date": "2024-12-31",
-                "condition": "Valid on all musical instruments.",
+                "condition": "Valid all musical instruments.",
                 "coupon_type": "Percentage"
             }
         ],
@@ -35,11 +35,11 @@
         ],
         "shop_Link": "https://glamourfashion.com",
         "category": "Fashion",
-        "isSaleOn": false
+        "isSaleOn": true
     },
     {
         "_id": "3",
-        "brand_name": "Fit Life",
+        "brand_name": "Fitness Life",
         "rating": 4.3,
         "description": "Get the best fitness equipment and accessories delivered to your door.",
         "brand_logo": "https://i.ibb.co.com/0M18DFk/fit-life.jpg",
@@ -58,7 +58,7 @@
     },
     {
         "_id": "4",
-        "brand_name": "Home Deco",
+        "brand_name": "Home Decoration",
         "rating": 3.9,
         "description": "Stylish home decor, furniture, and accessories to suit every taste.",
         "brand_logo": "https://i.ibb.co.com/3FjpZFc/indoor-plants-studio.jpg",
@@ -72,12 +72,12 @@
             }
         ],
         "shop_Link": "https://homedeco.com",
-        "category": "Home Decor",
+        "category": "Decoration",
         "isSaleOn": true
     },
     {
         "_id": 5,
-        "brand_name": "Auto Care",
+        "brand_name": "Auto Care Service",
         "rating": 4.4,
         "description": "Everything for your car: parts, tools, accessories, and care products.",
         "brand_logo": "https://i.ibb.co.com/xjrVnLN/Autocare.jpg",
@@ -96,7 +96,7 @@
     },
     {
         "_id": "6",
-        "brand_name": "Sports Gear",
+        "brand_name": "Sports Gear All Games",
         "rating": 4.3,
         "description": "Get the best deals on sports equipment, apparel, and accessories.",
         "brand_logo": "https://i.ibb.co.com/rdY9PJ0/sports-gear.jpg",
@@ -111,6 +111,6 @@
         ],
         "shop_Link": "https://sportsgear.com",
         "category": "Sports",
-        "isSaleOn": true
+        "isSaleOn": false
     }
 ]

@@ -7,6 +7,7 @@ import About from "../Pages/About";
 import Brands from "../Pages/Brands";
 import MyProfile from "../Pages/MyProfile";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Details from "../Pages/Details";
 
 const Router = createBrowserRouter([
     {
@@ -15,7 +16,8 @@ const Router = createBrowserRouter([
         children : [
             {
                 path : '/',
-                element :<Home></Home>
+                element :<Home></Home>,
+                loader : () => fetch('/brands.json'),
             },
             {
                 path : '/brands',
@@ -28,6 +30,10 @@ const Router = createBrowserRouter([
             {
                 path : '/about',
                 element : <About></About>
+            },
+            {
+                path : '/details',
+                element : <Details></Details>
             },
             {
                 path : '/login',
