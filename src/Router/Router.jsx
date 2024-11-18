@@ -6,6 +6,7 @@ import Register from "../Componentes/Register";
 import About from "../Pages/About";
 import Brands from "../Pages/Brands";
 import MyProfile from "../Pages/MyProfile";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const Router = createBrowserRouter([
     {
@@ -18,11 +19,11 @@ const Router = createBrowserRouter([
             },
             {
                 path : '/brands',
-                element :<Brands></Brands>
+                element :<PrivateRoute><Brands></Brands></PrivateRoute>
             },
             {
                 path : '/myProfile',
-                element :<MyProfile></MyProfile>
+                element :<PrivateRoute><MyProfile></MyProfile></PrivateRoute>
             },
             {
                 path : '/about',

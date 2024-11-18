@@ -1,16 +1,29 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
 const Login = () => {
-    const {name}= useContext(AuthContext)
-    console.log(name)
+    const { handleLoginUser } = useContext(AuthContext);
+    const navigate = useNavigate();
+
     const handleLogin = e => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(email, password)
+        
+        handleLoginUser(email, password)
+        .then(result => {
+            console.log(result.user)
+            navigate('/')
+        })
+        .catch(err => {
+            console.log('ERROR', err.message);
+        })
+    }
+
+    const handleForget = () => {
+        
     }
     return (
         <div className="hero bg-base-200">
@@ -31,7 +44,7 @@ const Login = () => {
                                 <span className="label-text">Password</span>
                             </label>
                             <input type="password" name="password" placeholder="password" className="input input-bordered" required />
-                            <label className="label">
+                            <label onClick={handleForget} className="label">
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
                         </div>

@@ -1,7 +1,21 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 
 const Navber = () => {
+    const { user, handleLogOutUser } = useContext(AuthContext)
+
+    const handleLogOut = () => {
+        handleLogOutUser()
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(err => {
+                console.log("ERROR", err.message)
+            })
+    }
+
     const links = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/brands'>Brands</NavLink></li>
@@ -29,7 +43,7 @@ const Navber = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                       {links}
+                        {links}
                     </ul>
                 </div>
                 <h2 className="text-3xl font-extrabold ">Coupon Quest</h2>
@@ -40,7 +54,17 @@ const Navber = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <NavLink to='/login'><button className="btn">Login</button></NavLink>
+                {
+                    user ? <>
+                        <div className="flex items-center gap-4 mr-8">
+                            <img className="w-12 h-12 rounded-full" src={user?.photoURL} alt="" />
+                            <h2>{user?.displayName}</h2>
+                        </div>
+                        <button onClick={handleLogOut} className="btn">Log-Out</button>
+                    </>
+                        :
+                        <NavLink to='/login'><button className="btn">Login</button></NavLink>
+                }
             </div>
         </div>
     );
