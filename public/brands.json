@@ -67,7 +67,7 @@
                 "coupon_code": "DECOR25",
                 "description": "25% off on selected furniture items.",
                 "expiry_date": "2024-11-30",
-                "condition": "Valid on selected furniture only.",
+                "condition": "Valid on selected furniture.",
                 "coupon_type": "Percentage"
             }
         ],

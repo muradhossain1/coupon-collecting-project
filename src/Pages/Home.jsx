@@ -11,7 +11,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <main>
-                <TopBrands></TopBrands>
+                <TopBrands brands={brands}></TopBrands>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
                     {
                         brands.map(brand => <BrandsOnSell key={brand._id} brand={brand}></BrandsOnSell>)

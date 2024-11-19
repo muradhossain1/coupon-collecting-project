@@ -9,7 +9,7 @@ const BrandsOnSell = ({ brand }) => {
     }
     return (
         <div>
-            <div className="card bg-base-100 border p-4 ">
+            <div className="card bg-base-100 border p-4 shadow-lg ">
                 <figure className="">
                     <img
                         src={brand_logo}

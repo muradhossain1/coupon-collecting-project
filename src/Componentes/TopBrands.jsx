@@ -1,19 +1,26 @@
 import Marquee from "react-fast-marquee";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 
-const TopBrands = () => {
+const TopBrands = ({ brands }) => {
     return (
         <div className="mt-12 space-y-6">
-            <div className="text-center">
-                <h2 className="text-4xl font-semibold">Coupon Brands Marquees</h2>
-                <p></p>
+            <div>
+                <h2 className="text-3xl font-extrabold text-center">Coupon Collecting Marquee</h2>
             </div>
-            <div className="flex items-center p-4 bg-gray-100 ">
+            <div className="flex items-center p-4 bg-gray-50 ">
                 <Marquee pauseOnHover={true} className="">
-                    <Link to='/details' className="mr-10">Logo</Link>
-                    <Link to='/details' className="mr-10">logo</Link>
-                    <Link to='/details' className="mr-10">logo</Link>
+                    <div className="flex">
+                        {
+                            brands.map(brand => <NavLink to={`/details/${brand._id}`} key={brand._id} className='mr-28'>
+                                <div className="flex flex-col items-center gap-2">
+                                    <img className="w-20 h-16 rounded-lg" src={brand.brand_logo} alt="" />
+                                    <h2 className="font-semibold">{brand.brand_name}</h2>
+                                </div>
+                            </NavLink>)
+                        }
+                    </div>
                 </Marquee>
             </div>
         </div>
@@ -21,3 +28,7 @@ const TopBrands = () => {
 };
 
 export default TopBrands;
+
+TopBrands.propTypes = {
+    brands: PropTypes.array
+}

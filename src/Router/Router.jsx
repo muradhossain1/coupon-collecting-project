@@ -11,38 +11,44 @@ import Details from "../Pages/Details";
 
 const Router = createBrowserRouter([
     {
-        path : '/',
-        element : <MainLayout></MainLayout>,
-        children : [
+        path: '/',
+        element: <MainLayout></MainLayout>,
+        children: [
             {
-                path : '/',
-                element :<Home></Home>,
-                loader : () => fetch('/brands.json'),
+                path: '/',
+                element: <Home></Home>,
+                loader: () => fetch('/brands.json'),
             },
             {
-                path : '/brands',
-                element :<PrivateRoute><Brands></Brands></PrivateRoute>,
-                loader : () => fetch('/brands.json'),
+                path: '/brands',
+                element: <PrivateRoute><Brands></Brands></PrivateRoute>,
+                loader: () => fetch('/brands.json'),
             },
             {
-                path : '/myProfile',
-                element :<PrivateRoute><MyProfile></MyProfile></PrivateRoute>
+                path: '/myProfile',
+                element: <PrivateRoute><MyProfile></MyProfile></PrivateRoute>
             },
             {
-                path : '/about',
-                element : <About></About>
+                path: '/about',
+                element: <About></About>
             },
             {
-                path : '/details',
-                element : <Details></Details>
+                path: '/details/:_id',
+                element: <Details></Details>,
+                loader: async ({ params }) => {
+                    const result = await fetch('/brands.json');
+                    const data = await result.json();
+                    const singleData = data.find(brand => brand._id == params._id);
+                    return singleData;
+                }
             },
             {
-                path : '/login',
-                element :<Login></Login>
+                path: '/login',
+                element: <Login></Login>
             },
             {
-                path : '/register',
-                element :<Register></Register>
+                path: '/register',
+                element: <Register></Register>
             },
         ]
     }

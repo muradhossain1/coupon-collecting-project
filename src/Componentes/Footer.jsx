@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div>
             <div className="bg-base-200 text-center space-y-3 py-4 ">
-                <h2 className="text-3xl font-bold">Coupon Collecting</h2>
+                <h2 className="text-3xl font-bold footer-title ">Coupon Collecting</h2>
             </div>
             <hr />
             <footer className="flex justify-evenly pt-4 pb-8  bg-base-200 text-base-content ">
@@ -15,7 +15,7 @@ const Footer = () => {
                     <a className="link link-hover">Marketing</a>
                     <a className="link link-hover">Advertisement</a>
                 </nav>
-                <nav className="flex flex-col text-center mr-8">
+                <nav className="flex flex-col text-center">
                     <h6 className=" footer-title mb-2 text-lg">Company</h6>
                     <a className="link link-hover">About us</a>
                     <a className="link link-hover"> My-Profile  </a>

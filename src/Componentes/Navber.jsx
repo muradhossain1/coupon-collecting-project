@@ -46,7 +46,7 @@ const Navber = () => {
                         {links}
                     </ul>
                 </div>
-                <h2 className="text-3xl font-extrabold ">Coupon Quest</h2>
+                <h2 className="text-xl md:text-3xl font-extrabold ">Coupon Quest</h2>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -58,7 +58,7 @@ const Navber = () => {
                     user ? <>
                         <div className="flex items-center gap-4 mr-8">
                             <img className="w-12 h-12 rounded-full" src={user?.photoURL} alt="" />
-                            <h2>{user?.displayName}</h2>
+                            <h2 className="hidden md:block">{user?.displayName}</h2>
                         </div>
                         <button onClick={handleLogOut} className="btn">Log-Out</button>
                     </>

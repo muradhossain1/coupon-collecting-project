@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 
 
 const BrandCards = ({ brand }) => {
-    const { brand_logo, brand_name, description, rating, isSaleOn } = brand;
+    const { _id, brand_logo, brand_name, description, rating, isSaleOn } = brand;
     return (
-        <div className="flex justify-between items-center border p-4 ">
-            <div className='flex items-center gap-4'>
-                <img className='w-28 h-20' src={brand_logo} alt="" />
-                <div className=''>
-                    <h2 className='text-lg font-semibold mb-3'>{brand_name}</h2>
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center border p-4 rounded-xl space-y-4 md:space-y-0 shadow-lg ">
+            <div className='flex flex-col md:flex-row  md:items-center gap-4'>
+                <img className='w-full md:w-28 md:h-20 rounded-lg' src={brand_logo} alt="" />
+                <div className='flex md:flex-col  justify-between items-center'>
+                    <h2 className='text-lg font-semibold justify-between md:mb-3'>{brand_name}</h2>
                     <div className='flex gap-2 items-center'>
                         <div className="rating rating-sm">
                             <input type="radio" name="rating-7" className="mask mask-star-2 bg-orange-400" />
@@ -27,12 +27,12 @@ const BrandCards = ({ brand }) => {
 
                 </div>
             </div>
-            <div className='text-center space-y-2 mr-10'>
+            <div className='text-center space-y-2 md:mr-10'>
                 <h2 className='text-2xl font-bold'>{brand_name}</h2>
                 <p className='md:w-5/6 mx-auto'>{description}</p>
             </div>
-            <div>
-                <Link to='/details'><button className='btn'>View Coupons</button></Link>
+            <div className='text-center'>
+                <Link to={`/details/${_id}`}><button className='btn'>View Coupons</button></Link>
                 <p>{isSaleOn}</p>
             </div>
         </div>
