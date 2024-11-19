@@ -21,7 +21,8 @@ const Router = createBrowserRouter([
             },
             {
                 path : '/brands',
-                element :<PrivateRoute><Brands></Brands></PrivateRoute>
+                element :<PrivateRoute><Brands></Brands></PrivateRoute>,
+                loader : () => fetch('/brands.json'),
             },
             {
                 path : '/myProfile',

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const BrandsOnSell = ({ brand }) => {
 
     const { brand_logo, brand_name, coupons, category, isSaleOn } = brand;
-    console.log(coupons)
+    
     if (isSaleOn !== true) {
         return;
     }
