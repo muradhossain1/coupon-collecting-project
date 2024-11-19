@@ -19,8 +19,8 @@ const BrandsOnSell = ({ brand }) => {
                 <div className="space-y-2 mt-4">
                     <h2 className="text-2xl font-bold">{brand_name}</h2>
                     <div>
-                        <h2 className='text-lg font-semibold'>Total Coupons :</h2>
-                        {
+                        <h2 className='text-lg font-semibold'>Total Coupons : {coupons.length}</h2>
+                        {/* {
                             coupons.map((coupon, index) => <ul key={index} className='ml-8  list-disc'>
                                 <li>{coupon.coupon_code}</li>
                                 <li>{coupon.description}</li>
@@ -28,7 +28,7 @@ const BrandsOnSell = ({ brand }) => {
                                 <li>{coupon.condition}</li>
                                 <li>{coupon.coupon_type}</li>
                             </ul>)
-                        }
+                        } */}
 
                     </div>
                     <p className='text-lg font-semibold'>Category : {category}</p>
