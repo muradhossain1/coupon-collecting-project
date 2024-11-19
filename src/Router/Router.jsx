@@ -21,7 +21,7 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/brands',
-                element: <PrivateRoute><Brands></Brands></PrivateRoute>,
+                element:<Brands></Brands>,
                 loader: () => fetch('/brands.json'),
             },
             {
@@ -34,7 +34,7 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/details/:_id',
-                element: <Details></Details>,
+                element: <PrivateRoute><Details></Details></PrivateRoute>,
                 loader: async ({ params }) => {
                     const result = await fetch('/brands.json');
                     const data = await result.json();

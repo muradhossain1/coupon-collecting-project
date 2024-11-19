@@ -19,6 +19,13 @@
                 "expiry_date": "2024-11-30",
                 "condition": "Standard shipping only.",
                 "coupon_type": "Free Shipping"
+            },
+            {
+                "coupon_code": "BUNDLE20",
+                "description": "20% off when you buy 2 or more items.",
+                "expiry_date": "2024-12-15",
+                "condition": "Minimum purchase of 2 items.",
+                "coupon_type": "Percentage"
             }
         ],
         "shop_Link": "https://musicmax.com",
@@ -45,6 +52,13 @@
                 "expiry_date": "2024-11-25",
                 "condition": "Valid on all accessories.",
                 "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "GIFT10",
+                "description": "10% off on gift cards.",
+                "expiry_date": "2024-12-20",
+                "condition": "Applicable to gift cards above $50.",
+                "coupon_type": "Percentage"
             }
         ],
         "shop_Link": "https://glamourfashion.com",
@@ -58,6 +72,13 @@
         "description": "Get the best fitness equipment and accessories delivered to your door.",
         "brand_logo": "https://i.ibb.co.com/0M18DFk/fit-life.jpg",
         "coupons": [
+            {
+                "coupon_code": "GYMFREE",
+                "description": "Free resistance bands on orders over $75.",
+                "expiry_date": "2024-12-05",
+                "condition": "Minimum spend $75.",
+                "coupon_type": "Gift"
+            },
             {
                 "coupon_code": "FIT10",
                 "description": "10% off on all fitness equipment.",
@@ -97,6 +118,13 @@
                 "expiry_date": "2024-12-10",
                 "condition": "Minimum purchase of $50.",
                 "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "FREEMAT",
+                "description": "Free rug on purchases over $200.",
+                "expiry_date": "2024-11-28",
+                "condition": "Valid on selected items.",
+                "coupon_type": "Gift"
             }
         ],
         "shop_Link": "https://homedeco.com",
@@ -105,7 +133,7 @@
     },
     {
         "_id": 5,
-        "brand_name": "Auto Care Service",
+        "brand_name": "Auto Car Service",
         "rating": 4.4,
         "description": "Everything for your car: parts, tools, accessories, and care products.",
         "brand_logo": "https://i.ibb.co.com/xjrVnLN/Autocare.jpg",
@@ -123,6 +151,13 @@
                 "expiry_date": "2024-11-25",
                 "condition": "Applicable only for purchases above $100.",
                 "coupon_type": "Gift"
+            },
+            {
+                "coupon_code": "OIL10",
+                "description": "10% off on motor oils.",
+                "expiry_date": "2024-12-20",
+                "condition": "Minimum purchase of $50.",
+                "coupon_type": "Percentage"
             }
         ],
         "shop_Link": "https://autocare.com",
@@ -149,6 +184,13 @@
                 "expiry_date": "2024-12-15",
                 "condition": "No minimum purchase required.",
                 "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "FREEBALL",
+                "description": "Free basketball with purchases above $150.",
+                "expiry_date": "2024-12-31",
+                "condition": "Valid on sports gear purchases.",
+                "coupon_type": "Gift"
             }
         ],
         "shop_Link": "https://sportsgear.com",

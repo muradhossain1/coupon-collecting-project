@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { FaGoogle } from "react-icons/fa";
 
@@ -7,6 +7,7 @@ import { FaGoogle } from "react-icons/fa";
 const Login = () => {
     const { handleLoginUser, handleLoginGoogle } = useContext(AuthContext);
     const [error, setError] = useState('');
+    const location = useLocation()
     const navigate = useNavigate();
 
     const handleLogin = e => {
@@ -17,7 +18,7 @@ const Login = () => {
         handleLoginUser(email, password)
             .then(result => {
                 console.log(result.user)
-                navigate('/')
+                navigate(location?.state ? location.state : '/')
             })
             .catch(err => {
                 setError(err.message);
@@ -27,7 +28,7 @@ const Login = () => {
         handleLoginGoogle()
             .then(res => {
                 console.log(res.user);
-                navigate('/')
+                navigate(location?.state ? location.state : '/')
             })
             .catch(err => {
                 setError(err.message)

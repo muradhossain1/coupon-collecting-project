@@ -1,6 +1,10 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { AiOutlineHome } from "react-icons/ai";
+import { TbBrandAdobe } from "react-icons/tb";
+import { FaRegCircleUser } from "react-icons/fa6";
+import { LuMenuSquare } from "react-icons/lu";
 
 
 const Navber = () => {
@@ -17,13 +21,13 @@ const Navber = () => {
     }
 
     const links = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/brands'>Brands</NavLink></li>
-        <li><NavLink to='/myProfile'>My-Profile</NavLink></li>
-        <li><NavLink to='/about'>About Dev</NavLink></li>
+        <li><NavLink to='/'><AiOutlineHome></AiOutlineHome> Home</NavLink></li>
+        <li><NavLink to='/brands'><TbBrandAdobe></TbBrandAdobe> Brands</NavLink></li>
+        {user? <li><NavLink to='/myProfile'><FaRegCircleUser></FaRegCircleUser> My-Profile</NavLink></li> : ''}
+        <li><NavLink to='/about'><LuMenuSquare></LuMenuSquare> About Dev</NavLink></li>
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 mt-4">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

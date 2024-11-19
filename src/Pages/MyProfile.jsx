@@ -10,6 +10,7 @@ const MyProfile = () => {
                 <img className="" src={user?.photoURL} alt="" />
                 <h2 className="hidden md:block">Name : {user?.displayName}</h2>
                 <h2 className="hidden md:block">Email : {user?.email}</h2>
+                <button className="btn">Update Profile</button>
             </div>
         </div>
     );
