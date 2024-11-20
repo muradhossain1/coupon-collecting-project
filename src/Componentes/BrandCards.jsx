@@ -17,9 +17,9 @@ const BrandCards = ({ brand }) => {
                                 type="radio"
                                 name="rating-7"
                                 className="mask mask-star-2 bg-orange-400"
-                                 />
+                            />
                             <input type="radio" name="rating-7" className="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-7" className="mask mask-star-2 bg-orange-400" defaultChecked/>
+                            <input type="radio" name="rating-7" className="mask mask-star-2 bg-orange-400" defaultChecked />
                             <input type="radio" name="rating-7" className="mask mask-star-2 bg-orange-400" />
                         </div>
                         <p>{rating}</p>
@@ -33,8 +33,10 @@ const BrandCards = ({ brand }) => {
             </div>
             <div className='text-center'>
                 <Link to={`/details/${_id}`}><button className='btn'>View Coupons</button></Link>
-                <p>{isSaleOn == true && <marquee>Bouncing text...</marquee>
-                }</p>
+                <div>
+                    {isSaleOn == true && <p className='animate-bounce text-red-600 mt-4 font-semibold'>Sale is on</p>
+                    }
+                </div>
             </div>
         </div>
     );

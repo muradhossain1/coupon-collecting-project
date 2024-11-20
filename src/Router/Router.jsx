@@ -9,6 +9,7 @@ import MyProfile from "../Pages/MyProfile";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Details from "../Pages/Details";
 import Errorpage from "../Pages/Errorpage";
+import UpdateProfile from "../Componentes/UpdateProfile";
 
 const Router = createBrowserRouter([
     {
@@ -51,6 +52,10 @@ const Router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/updateProfile',
+                element: <UpdateProfile></UpdateProfile>
             },
         ]
     }

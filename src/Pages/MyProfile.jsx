@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { Link } from "react-router-dom";
 
 
 const MyProfile = () => {
@@ -13,7 +14,7 @@ const MyProfile = () => {
                     <h2 className="text-xl font-semibold"> {user?.displayName}</h2>
                     <h2 className="text-xl font-semibold"> {user?.email}</h2>
                 </div>
-                <button className="btn">Update Profile</button>
+                <button className="btn"><Link to='/updateProfile'>Update Profile</Link></button>
             </div>
         </div>
     );
