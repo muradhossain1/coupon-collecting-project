@@ -21,13 +21,13 @@ const Navber = () => {
     }
 
     const links = <>
-        <li><NavLink to='/'><AiOutlineHome></AiOutlineHome> Home</NavLink></li>
-        <li><NavLink to='/brands'><TbBrandAdobe></TbBrandAdobe> Brands</NavLink></li>
-        {user? <li><NavLink to='/myProfile'><FaRegCircleUser></FaRegCircleUser> My-Profile</NavLink></li> : ''}
-        <li><NavLink to='/about'><LuMenuSquare></LuMenuSquare> About Dev</NavLink></li>
+        <li className="text-sm font-semibold"><NavLink to='/'><AiOutlineHome></AiOutlineHome> Home</NavLink></li>
+        <li className="text-sm font-semibold"><NavLink to='/brands'><TbBrandAdobe></TbBrandAdobe> Brands</NavLink></li>
+        {user? <li className="text-sm font-semibold"><NavLink to='/myProfile'><FaRegCircleUser></FaRegCircleUser> My-Profile</NavLink></li> : ''}
+        <li className="text-sm font-semibold"><NavLink to='/about'><LuMenuSquare></LuMenuSquare> About Dev</NavLink></li>
     </>
     return (
-        <div className="navbar bg-base-100 mt-4">
+        <div className="navbar mt-4 bg-orange-50 px-20">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -50,7 +50,7 @@ const Navber = () => {
                         {links}
                     </ul>
                 </div>
-                <h2 className="text-xl md:text-3xl font-extrabold ">Coupon Quest</h2>
+                <h2 className="text-xl text-slate-600 md:text-3xl font-extrabold ">Coupon Quest</h2>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -62,12 +62,12 @@ const Navber = () => {
                     user ? <>
                         <div className="flex items-center gap-4 mr-8">
                             <img className="w-12 h-12 rounded-full" src={user?.photoURL} alt="" />
-                            <h2 className="hidden md:block">{user?.displayName}</h2>
+                            <h2 className="hidden md:block font-semibold">{user?.displayName}</h2>
                         </div>
-                        <button onClick={handleLogOut} className="btn">Log-Out</button>
+                        <button onClick={handleLogOut} className="btn btn-warning">Log-Out</button>
                     </>
                         :
-                        <NavLink to='/login'><button className="btn">Login</button></NavLink>
+                        <NavLink to='/login'><button className="btn btn-warning">Login</button></NavLink>
                 }
             </div>
         </div>

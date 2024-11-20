@@ -7,7 +7,7 @@ const TopBrands = ({ brands }) => {
     return (
         <div className="mt-12 space-y-6">
             <div>
-                <h2 className="text-3xl font-extrabold text-center">Coupon Collecting Marquee</h2>
+                <h2 className="text-3xl font-extrabold text-center text-slate-600">Top Brands Coupon</h2>
             </div>
             <div className="flex items-center p-4 bg-gray-50 ">
                 <Marquee pauseOnHover={true} className="">

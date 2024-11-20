@@ -14,10 +14,13 @@ const Home = () => {
             <Banner></Banner>
             <main>
                 <TopBrands brands={brands}></TopBrands>
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
-                    {
-                        brands.map(brand => <BrandsOnSell key={brand._id} brand={brand}></BrandsOnSell>)
-                    }
+                <div className=" mt-12">
+                    <h2 className="text-3xl font-extrabold text-slate-600">Brands on Sell Coupon</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6">
+                        {
+                            brands.map(brand => <BrandsOnSell key={brand._id} brand={brand}></BrandsOnSell>)
+                        }
+                    </div>
                 </div>
                 <WorkProcess></WorkProcess>
                 <QuestionSection></QuestionSection>

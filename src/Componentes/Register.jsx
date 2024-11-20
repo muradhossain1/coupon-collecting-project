@@ -48,37 +48,37 @@ const Register = () => {
             })
     }
     return (
-        <div className="hero bg-base-200">
+        <div className="hero bg-base-200 md:w-2/3 mt-12 mx-auto rounded-xl">
             <div className="hero-content flex-col">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Register now!</h1>
+                    <h1 className="text-4xl font-bold">Register now!</h1>
                 </div>
-                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div className="card bg-base-100 w-full max-w-sm shrink-0 mt-2 mb-6 shadow-2xl">
                     <form onSubmit={handleRegister} className="card-body">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Name</span>
+                                <span className="label-text text-xl font-semibold">Name</span>
                             </label>
                             <input type="text" name="name" placeholder="Name" className="input input-bordered" required/>
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Photo URL</span>
+                                <span className="label-text text-xl font-semibold">Photo URL</span>
                             </label>
                             <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" required/>
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text text-xl font-semibold">Email</span>
                             </label>
                             <input type="email" name="email" placeholder="Email" className="input input-bordered" required/>
                         </div>
                         <div className="form-control relative">
                             <label className="label">
-                                <span className="label-text">Password</span>
+                                <span className="label-text text-xl font-semibold">Password</span>
                             </label>
                             <input type={showPassword ? 'text':'password'} name="password" placeholder="Password" className="input input-bordered" required />
-                            <button onClick={() => setShowPassword(!showPassword)} className="absolute top-[52px] right-4">
+                            <button onClick={() => setShowPassword(!showPassword)} className="absolute top-[60px] right-4">
                                 {
                                     showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
                                 }
@@ -88,9 +88,9 @@ const Register = () => {
                             <button className="btn btn-primary">Register</button>
                         </div>
                         {error && <p className="text-red-500 text-xs">{error}</p>}
-                        <p>Already have an account? please <Link to='/login' className="link">Login</Link></p>
+                        <p className="text-lg mt-2 font-semibold">Already have an account? please <Link to='/login' className="link text-blue-800">Login</Link></p>
                     </form>
-                    <button onClick={handleGoogle} className="btn mx-4 mb-8">
+                    <button onClick={handleGoogle} className="btn btn-warning mx-8 mb-8">
                         <FaGoogle></FaGoogle> Login With Google
                     </button>
                 </div>

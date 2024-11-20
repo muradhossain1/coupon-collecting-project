@@ -18,22 +18,22 @@ const UpdateProfile = () => {
         })
     }
     return (
-        <div className="hero bg-base-200">
+        <div className="hero bg-base-200  mt-12 md:w-2/3 mx-auto rounded-xl">
             <div className="hero-content flex-col">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Update you profile!</h1>
+                    <h1 className="text-3xl font-bold">Update you profile!</h1>
                 </div>
-                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div className="card bg-base-100 mt-2 mb-6 w-full max-w-sm shrink-0 shadow-2xl">
                     <form onSubmit={handleUpdate} className="card-body">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Name</span>
+                                <span className="label-text text-xl font-semibold">Name</span>
                             </label>
                             <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Photo URL</span>
+                                <span className="label-text text-xl font-semibold">Photo URL</span>
                             </label>
                             <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" required />
                         </div>

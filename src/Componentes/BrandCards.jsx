@@ -7,7 +7,7 @@ const BrandCards = ({ brand }) => {
     return (
         <div className="flex flex-col md:flex-row md:justify-between md:items-center border p-4 rounded-xl space-y-4 md:space-y-0 shadow-lg ">
             <div className='flex flex-col md:flex-row  md:items-center gap-4'>
-                <img className='w-full md:w-28 md:h-20 rounded-lg' src={brand_logo} alt="" />
+                <img className='w-full md:w-28 md:h-24 rounded-lg' src={brand_logo} alt="" />
                 <div className='flex md:flex-col  justify-between items-center'>
                     <h2 className='text-lg font-semibold justify-between md:mb-3'>{brand_name}</h2>
                     <div className='flex gap-2 items-center'>
@@ -28,7 +28,7 @@ const BrandCards = ({ brand }) => {
                 </div>
             </div>
             <div className='text-center space-y-2 md:mr-10'>
-                <h2 className='text-2xl font-bold'>{brand_name}</h2>
+                <h2 className='text-2xl font-bold text-slate-600'>{brand_name}</h2>
                 <p className='md:w-5/6 mx-auto'>{description}</p>
             </div>
             <div className='text-center'>

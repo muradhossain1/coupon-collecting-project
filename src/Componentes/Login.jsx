@@ -34,40 +34,36 @@ const Login = () => {
                 setError(err.message)
             })
     }
-
-    const handleForget = () => {
-
-    }
     return (
-        <div className="hero bg-base-200">
+        <div className="hero bg-base-200  md:w-2/3 mt-12 mx-auto rounded-xl">
             <div className="hero-content flex-col">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Login now!</h1>
+                    <h1 className="text-4xl font-bold">Login now!</h1>
                 </div>
-                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <div className="card bg-base-100 w-full max-w-sm shrink-0 mt-2 shadow-2xl mb-6">
                     <form onSubmit={handleLogin} className="card-body">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text text-xl font-semibold">Email</span>
                             </label>
                             <input type="email" name="email" placeholder="email" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Password</span>
+                                <span className="label-text text-xl font-semibold">Password</span>
                             </label>
                             <input type="password" name="password" placeholder="password" className="input input-bordered" required />
-                            <label onClick={handleForget} className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                            <label className="label">
+                                <Link to='/forget' href="#" className="label-text-alt link link-hover text-xl font-semibold">Forgot password?</Link>
                             </label>
                         </div>
-                        <div className="form-control mt-6">
+                        <div className="form-control mt-2">
                             <button className="btn btn-primary">Login</button>
                         </div>
                         {error && <p className="text-red-500 text-xs">{error}</p>}
-                        <p>New to this website? please <Link to='/register' className="link">Register</Link></p>
+                        <p className="text-lg font-semibold mt-2">New to this website? please <Link to='/register' className="link text-blue-800">Register</Link></p>
                     </form>
-                    <button onClick={handleGoogle} className="btn mx-4 mb-8">
+                    <button onClick={handleGoogle} className="btn btn-warning mx-8 mb-8">
                         <FaGoogle></FaGoogle> Login With Google
                     </button>
                 </div>
