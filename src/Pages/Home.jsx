@@ -2,6 +2,8 @@ import { useLoaderData } from "react-router-dom";
 import Banner from "../Componentes/Banner";
 import TopBrands from "../Componentes/TopBrands";
 import BrandsOnSell from "../Componentes/BrandsOnSell";
+import WorkProcess from "../Componentes/WorkProcess";
+import QuestionSection from "../Componentes/QuestionSection";
 
 
 const Home = () => {
@@ -17,6 +19,8 @@ const Home = () => {
                         brands.map(brand => <BrandsOnSell key={brand._id} brand={brand}></BrandsOnSell>)
                     }
                 </div>
+                <WorkProcess></WorkProcess>
+                <QuestionSection></QuestionSection>
             </main>
         </div>
     );

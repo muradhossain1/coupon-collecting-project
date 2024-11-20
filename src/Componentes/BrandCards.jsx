@@ -33,7 +33,8 @@ const BrandCards = ({ brand }) => {
             </div>
             <div className='text-center'>
                 <Link to={`/details/${_id}`}><button className='btn'>View Coupons</button></Link>
-                <p>{isSaleOn}</p>
+                <p>{isSaleOn == true && <marquee>Bouncing text...</marquee>
+                }</p>
             </div>
         </div>
     );

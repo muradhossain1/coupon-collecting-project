@@ -8,11 +8,13 @@ import Brands from "../Pages/Brands";
 import MyProfile from "../Pages/MyProfile";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Details from "../Pages/Details";
+import Errorpage from "../Pages/Errorpage";
 
 const Router = createBrowserRouter([
     {
         path: '/',
         element: <MainLayout></MainLayout>,
+        errorElement :<Errorpage></Errorpage>,
         children: [
             {
                 path: '/',

@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 
@@ -8,6 +8,7 @@ const Register = () => {
     const { handleCreateUser, userProfileUpdate, handleLoginGoogle } = useContext(AuthContext);
     const [error, setError] = useState('');
     const [showPassword, setShowPassword] = useState(false)
+    const location = useLocation()
     const navigate = useNavigate();
 
     const handleRegister = e => {
@@ -29,7 +30,7 @@ const Register = () => {
         handleCreateUser(email, password)
         .then(result => {
             console.log(result.user)
-            navigate('/')
+            navigate(location?.state ? location.state : '/')
             userProfileUpdate(name, photo)
         })
         .catch(err => {
@@ -40,7 +41,7 @@ const Register = () => {
         handleLoginGoogle()
             .then(res => {
                 console.log(res.user);
-                navigate('/')
+                navigate(location?.state ? location.state : '/')
             })
             .catch(err => {
                 setError(err.message)

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+// import CopyToClipboard from 'react-copy-to-clipboard';
 
 const DetailsCard = ({ coupon, brands }) => {
     const { brand_logo, brand_name, rating } = brands;
@@ -15,7 +16,7 @@ const DetailsCard = ({ coupon, brands }) => {
                             type="radio"
                             name="rating-7"
                             className="mask mask-star-2 bg-orange-400"
-                            />
+                        />
                         <input type="radio" name="rating-7" className="mask mask-star-2 bg-orange-400" />
                         <input type="radio" name="rating-7" className="mask mask-star-2 bg-orange-400" defaultChecked />
                         <input type="radio" name="rating-7" className="mask mask-star-2 bg-orange-400" />
@@ -34,6 +35,12 @@ const DetailsCard = ({ coupon, brands }) => {
                 </ul>
             </div>
             <button className="btn w-full">Copy Code</button>
+            {/* <CopyToClipboard text={this.state.value}
+                onCopy={() => this.setState({ copied: true })}>
+                <button>Copy to clipboard with button</button>
+            </CopyToClipboard>
+
+            {this.state.copied ? <span style={{ color: 'red' }}>Copied.</span> : null} */}
         </div>
     );
 };
@@ -42,5 +49,5 @@ export default DetailsCard;
 
 DetailsCard.propTypes = {
     coupon: PropTypes.object,
-    brands : PropTypes.object
+    brands: PropTypes.object
 }
