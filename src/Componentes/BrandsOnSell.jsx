@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import 'animate.css';
 
 const BrandsOnSell = ({ brand }) => {
 
@@ -9,7 +10,7 @@ const BrandsOnSell = ({ brand }) => {
     }
     return (
         <div>
-            <div className="card bg-base-100 border p-4 shadow-lg ">
+            <div className="card bg-base-100 border p-4 shadow-lg animate__animated animate__backInUp ">
                 <figure className="">
                     <img
                         src={brand_logo}
