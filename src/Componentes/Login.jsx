@@ -71,7 +71,7 @@ const Login = () => {
                         <div className="form-control mt-2">
                             <button className="btn btn-primary">Login</button>
                         </div>
-                        {error && <p className="text-red-500 text-xs">{error}</p>}
+                        {error && <p className="text-red-500 text-sm">{error}</p>}
                         <p className="text-lg font-semibold mt-2">New to this website? please <Link to='/register' className="link text-blue-800">Register</Link></p>
                     </form>
                     <button onClick={handleGoogle} className="btn btn-warning mx-8 mb-8">

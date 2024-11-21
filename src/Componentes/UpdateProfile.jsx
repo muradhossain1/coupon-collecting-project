@@ -8,7 +8,7 @@ const UpdateProfile = () => {
     const {userProfileUpdate} = useContext(AuthContext);
     const navigate = useNavigate();
     
-    const handleUpdate = e=> {
+    const handleUpdate = e => {
         e.preventDefault();
         const name = e.target.name.value;
         const photo = e.target.photo.value;

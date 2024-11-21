@@ -7,7 +7,9 @@ import PropTypes from 'prop-types';
 const PrivateRoute = ({ children }) => {
     const { user, loading }= useContext(AuthContext);
     const location = useLocation()
-
+    if(user){
+        return children
+    }
     if (loading) {
         return <div className="flex justify-center items-center min-h-screen"><span className="loading loading-spinner text-secondary"></span></div>
     }

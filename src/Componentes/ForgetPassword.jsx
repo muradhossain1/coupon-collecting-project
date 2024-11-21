@@ -45,7 +45,7 @@ const ForgetPassword = () => {
                                 onChange={(e) => setEmail(e.target.value)}
                                  type="email" name="email" placeholder="email" className="input input-bordered" required />
                             </div>
-                            {error && <p className="text-red-500 text-xs">{error}</p>}
+                            {error && <p className="text-red-500 text-sm">{error}</p>}
 
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Reset Password</button>

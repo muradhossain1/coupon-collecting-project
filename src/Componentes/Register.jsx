@@ -93,7 +93,7 @@ const Register = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Register</button>
                         </div>
-                        {error && <p className="text-red-500 text-xs">{error}</p>}
+                        {error && <p className="text-red-500 text-sm">{error}</p>}
                         <p className="text-lg mt-2 font-semibold">Already have an account? please <Link to='/login' className="link text-blue-800">Login</Link></p>
                     </form>
                     <button onClick={handleGoogle} className="btn btn-warning mx-8 mb-8">
