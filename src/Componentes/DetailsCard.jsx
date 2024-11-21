@@ -3,7 +3,8 @@ import { toast } from 'react-toastify';
 // import CopyToClipboard from 'react-copy-to-clipboard';
 
 const DetailsCard = ({ coupon }) => {
-
+    const { coupon_code, description, expiry_date, condition, coupon_type } = coupon;
+    
     const handleCopyCode = (code) => {
         navigator.clipboard.writeText(code)
             .then(() => {
@@ -18,13 +19,13 @@ const DetailsCard = ({ coupon }) => {
         window.open("https://musicmax.eu", "_blank")
     }
 
-    const { coupon_code, description, expiry_date, condition, coupon_type } = coupon;
+    
     return (
-        <div className='space-y-4 p-6 rounded-xl border '>
+        <div className='space-y-4 p-6 rounded-xl bg-slate-200 shadow-lg '>
 
             <div className=''>
                 <h1 className='text-lg font-semibold'>Coupons: </h1>
-                <ul className='ml-8  list-disc'>
+                <ul className='ml-8 md:min-h-44 list-disc'>
                     <li>{coupon_code}</li>
                     <li>{description}</li>
                     <li>{expiry_date}</li>

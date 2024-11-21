@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 
+
 const BrandCards = ({ brand }) => {
     const { _id, brand_logo, brand_name, description, rating, isSaleOn } = brand;
     return (
@@ -34,7 +35,7 @@ const BrandCards = ({ brand }) => {
             <div className='text-center'>
                 <Link to={`/details/${_id}`}><button className='btn'>View Coupons</button></Link>
                 <div>
-                    {isSaleOn == true && <p className='animate-bounce text-red-600 mt-4 font-semibold'>Sale is on</p>
+                    {isSaleOn == true && <p className='animate-bounce text-red-600 mt-6 font-semibold'>Sale is on</p>
                     }
                 </div>
             </div>

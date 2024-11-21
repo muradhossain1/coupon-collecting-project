@@ -8,11 +8,11 @@ const Details = () => {
     return (
         <div className="p-6 rounded-xl border md:w-4/5 mx-auto space-y-4 mt-6">
             <div>
-                <div className="">
-                    <img className="rounded-lg mb-4 w-full " src={brand_logo} alt="" />
+                <div className=" flex items-center justify-center">
+                    <img className="rounded-lg mb-4 md:h-96 " src={brand_logo} alt="" />
                 </div>
-                <div className="flex justify-between items-center">
-                    <h2 className="text-2xl font-bold">{brand_name}</h2>
+                <div className="flex justify-between items-center px-20">
+                    <h2 className="text-3xl py-4 font-bold">{brand_name}</h2>
                     <div className='flex gap-2 items-center'>
                         <div className="rating rating-md">
                             <input type="radio" name="rating-7" className="mask mask-star-2 bg-orange-400" />

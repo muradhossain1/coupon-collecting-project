@@ -28,7 +28,7 @@
                 "coupon_type": "Percentage"
             }
         ],
-        "shop_Link": "https://musicmax.com",
+        "shop_Link": "https://musicmax.eu/",
         "category": "Music",
         "isSaleOn": true
     },
@@ -61,7 +61,7 @@
                 "coupon_type": "Percentage"
             }
         ],
-        "shop_Link": "https://glamourfashion.com",
+        "shop_Link": "https://www.glamour.com/fashion",
         "category": "Fashion",
         "isSaleOn": true
     },
@@ -94,7 +94,7 @@
                 "coupon_type": "Percentage"
             }
         ],
-        "shop_Link": "https://fitlife.com",
+        "shop_Link": "https://www.lifefitness.com/en-us",
         "category": "Fitness",
         "isSaleOn": true
     },
@@ -127,7 +127,7 @@
                 "coupon_type": "Gift"
             }
         ],
-        "shop_Link": "https://homedeco.com",
+        "shop_Link": "https://www.aarong.com/home-decor",
         "category": "Decoration",
         "isSaleOn": true
     },
@@ -160,7 +160,7 @@
                 "coupon_type": "Percentage"
             }
         ],
-        "shop_Link": "https://autocare.com",
+        "shop_Link": "https://biswasautomobilesbd.com/",
         "category": "Automotive",
         "isSaleOn": false
     },
@@ -193,7 +193,7 @@
                 "coupon_type": "Gift"
             }
         ],
-        "shop_Link": "https://sportsgear.com",
+        "shop_Link": "https://en.wikipedia.org/wiki/Sports_equipment",
         "category": "Sports",
         "isSaleOn": false
     }
