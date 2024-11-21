@@ -5,6 +5,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { TbBrandAdobe } from "react-icons/tb";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { LuMenuSquare } from "react-icons/lu";
+import { toast } from 'react-toastify';
 
 
 const Navber = () => {
@@ -12,8 +13,10 @@ const Navber = () => {
 
     const handleLogOut = () => {
         handleLogOutUser()
-            .then(result => {
-                console.log(result.user)
+            .then(() => {
+                toast.success('Successful your account logout', {
+                    position: "top-center",
+                })
             })
             .catch(err => {
                 console.log("ERROR", err.message)

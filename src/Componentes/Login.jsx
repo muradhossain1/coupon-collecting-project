@@ -1,12 +1,15 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { FaGoogle } from "react-icons/fa";
+import { toast } from 'react-toastify';
 
 
 const Login = () => {
     const { handleLoginUser, handleLoginGoogle } = useContext(AuthContext);
-    const [error, setError] = useState('');
+    const [error, setError] = useState('')
+    const emailRef = useRef()
+    const [email, setEmail] = useState('');
     const location = useLocation()
     const navigate = useNavigate();
 
@@ -16,8 +19,10 @@ const Login = () => {
         const password = e.target.password.value;
 
         handleLoginUser(email, password)
-            .then(result => {
-                console.log(result.user)
+            .then(() => {
+                toast.success('Successful your account Login', {
+                    position: "top-center",
+                })
                 navigate(location?.state ? location.state : '/')
             })
             .catch(err => {
@@ -26,8 +31,10 @@ const Login = () => {
     }
     const handleGoogle = () => {
         handleLoginGoogle()
-            .then(res => {
-                console.log(res.user);
+            .then(() => {
+                toast.success('Successful your google account Login',{
+                    position: "top-center",
+                })
                 navigate(location?.state ? location.state : '/')
             })
             .catch(err => {
@@ -46,7 +53,11 @@ const Login = () => {
                             <label className="label">
                                 <span className="label-text text-xl font-semibold">Email</span>
                             </label>
-                            <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                            <input
+                            ref={emailRef}
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                             type="email" name="email" placeholder="email" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -54,7 +65,7 @@ const Login = () => {
                             </label>
                             <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                             <label className="label">
-                                <Link to='/forget' href="#" className="label-text-alt link link-hover text-xl font-semibold">Forgot password?</Link>
+                                <Link to='/forget' state={{email}} className="label-text-alt link link-hover text-xl font-semibold">Forgot password?</Link>
                             </label>
                         </div>
                         <div className="form-control mt-2">

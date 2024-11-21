@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
+import { toast } from 'react-toastify';
 
 
 const Register = () => {
@@ -28,8 +29,11 @@ const Register = () => {
         }
 
         handleCreateUser(email, password)
-        .then(result => {
-            console.log(result.user)
+        .then(()=> {
+            toast.success('Successful your account Register',{
+                position: "top-center",
+            })
+
             navigate(location?.state ? location.state : '/')
             userProfileUpdate(name, photo)
         })
@@ -39,8 +43,10 @@ const Register = () => {
     }
     const handleGoogle = () => {
         handleLoginGoogle()
-            .then(res => {
-                console.log(res.user);
+            .then(() => {
+                toast.success('Successful your google account Register',{
+                    position: "top-center",
+                })
                 navigate(location?.state ? location.state : '/')
             })
             .catch(err => {

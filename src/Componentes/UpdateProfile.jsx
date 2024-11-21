@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 
 const UpdateProfile = () => {
@@ -14,6 +15,9 @@ const UpdateProfile = () => {
 
         userProfileUpdate(name, photo)
         .then(() => {
+            toast.success('Successful your Profile Update', {
+                position: "top-center",
+            })
             navigate('/myProfile')
         })
     }

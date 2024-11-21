@@ -1,8 +1,8 @@
-
+import 'animate.css';
 
 const Banner = () => {
     return (
-        <div className="mt-6 p-6 border rounded-xl md:w-2/3 mx-auto  ">
+        <div className="mt-6 p-6 border rounded-xl md:w-2/3 mx-auto animate__animated animate__heartBeat  ">
             <div className="carousel ">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img
