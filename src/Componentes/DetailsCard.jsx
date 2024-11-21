@@ -4,7 +4,6 @@ import { toast } from 'react-toastify';
 
 const DetailsCard = ({ coupon, brands }) => {
     const {shop_Link} = brands;
-    console.log(shop_Link)
     const { coupon_code, description, expiry_date, condition, coupon_type } = coupon;
     
     const handleCopyCode = (code) => {

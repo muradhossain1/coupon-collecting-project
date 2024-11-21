@@ -12,7 +12,7 @@ const WorkProcess = () => {
                         className=" rounded-lg w-full" />
                 </div>
                 <div className="md:w-1/2 text-center">
-                    <h1 className="text-5xl font-bold">Our Works Process</h1>
+                    <h1 className="text-2xl md:text-5xl font-bold">Our Works Process</h1>
                     <p className="py-4">
                         A performing arts series unlike any other, Works & Process discount pro captivates with
                         its blend champions and offers unprecedented access.

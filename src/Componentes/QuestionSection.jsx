@@ -4,7 +4,7 @@ const QuestionSection = () => {
     return (
         <div>
             <div className="mt-12">
-                <h2 className="text-4xl font-bold">Frequently Asked Questions</h2>
+                <h2 className="text-2xl md:text-4xl font-bold">Frequently Asked Questions</h2>
             </div>
             <div className="collapse collapse-arrow border mt-4 ">
                 <input type="radio" name="my-accordion-2" defaultChecked />

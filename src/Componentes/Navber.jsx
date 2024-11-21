@@ -18,9 +18,6 @@ const Navber = () => {
                     position: "top-center",
                 })
             })
-            .catch(err => {
-                console.log("ERROR", err.message)
-            })
     }
 
     const links = <>
@@ -30,7 +27,7 @@ const Navber = () => {
         <li className="text-sm font-semibold"><NavLink to='/about'><LuMenuSquare></LuMenuSquare> About Dev</NavLink></li>
     </>
     return (
-        <div className="navbar mt-4 bg-orange-50 px-20">
+        <div className="navbar mt-4 bg-orange-50 md:px-20">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -53,7 +50,7 @@ const Navber = () => {
                         {links}
                     </ul>
                 </div>
-                <h2 className="text-xl text-slate-600 md:text-3xl font-extrabold ">Coupon Quest</h2>
+                <h2 className="text-lg text-slate-600 md:text-3xl font-extrabold ">Coupon Quest</h2>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

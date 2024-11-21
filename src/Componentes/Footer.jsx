@@ -7,7 +7,7 @@ const Footer = () => {
                 <h2 className="text-3xl font-bold footer-title ">Coupon Collecting</h2>
             </div>
             <hr />
-            <footer className="flex justify-evenly pt-4 pb-8  bg-base-200 text-base-content ">
+            <footer className="flex flex-col md:flex-row justify-evenly pt-4 pb-8  bg-base-200 text-base-content space-y-6">
                 <nav className="flex flex-col text-center ">
                     <h6 className="footer-title text-lg mb-2 ">Services</h6>
                     <a className="link link-hover">Branding</a>
@@ -21,9 +21,9 @@ const Footer = () => {
                     <a className="link link-hover"> My-Profile  </a>
                     <a className="link link-hover">Contact</a>
                 </nav>
-                <nav>
+                <nav className="flex flex-col text-center ">
                     <h6 className="footer-title text-lg">Social Links</h6>
-                    <div className="grid grid-flow-col gap-4">
+                    <div className=" flex justify-center md:grid md:grid-flow-col  gap-4">
                         <a href="https://x.com/MDMurad34810132"  target="_blank">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"

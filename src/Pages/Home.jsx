@@ -8,7 +8,7 @@ import QuestionSection from "../Componentes/QuestionSection";
 
 const Home = () => {
     const brands = useLoaderData();
-    console.log(brands)
+    
     return (
         <div>
             <Banner></Banner>
