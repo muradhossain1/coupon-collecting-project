@@ -1,8 +1,22 @@
-# React + Vite
+This Projects Name Is Coupon Quest.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Coupon Quest Live Live Link : "https://my-assignment-9-2f295.web.app/".
 
-Currently, two official plugins are available:
+1. features of this project :
+        User Authentication.
+        Detailed Coupon Information.
+        Secure Data Management.
+        Mobile-Responsive Design.
+        User-Friendly Interface.
+        Coupon Browsing.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2.  npm packages used this project :
+        react-router-dom.
+        firebase.
+        react-icons.
+        react-toastify.
+        react-fast-marquee.
+        react-copy-to-clipboard.
+        animate-css.
+        prop-types.
+

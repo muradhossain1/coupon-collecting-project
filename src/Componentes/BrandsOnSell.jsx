@@ -1,16 +1,24 @@
 import PropTypes from 'prop-types';
 import 'animate.css';
+import { useEffect, useState } from 'react';
 
 const BrandsOnSell = ({ brand }) => {
 
     const { brand_logo, brand_name, coupons, category, isSaleOn } = brand;
-    
+    const [useAnimate, setUseAnimate] = useState(false);
+
+    useEffect(() => {
+        setUseAnimate(true);
+    }, [])
+
     if (isSaleOn !== true) {
         return;
     }
+    
+
     return (
         <div>
-            <div className="card bg-base-100 border p-4 shadow-lg animate__animated animate__backInUp ">
+            <div className={`card bg-base-100 border p-4 shadow-lg ${useAnimate?'animate__animated animate__backInUp' : ''} `}>
                 <figure className="">
                     <img
                         src={brand_logo}

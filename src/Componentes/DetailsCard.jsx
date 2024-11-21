@@ -2,7 +2,9 @@ import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
 // import CopyToClipboard from 'react-copy-to-clipboard';
 
-const DetailsCard = ({ coupon }) => {
+const DetailsCard = ({ coupon, brands }) => {
+    const {shop_Link} = brands;
+    console.log(shop_Link)
     const { coupon_code, description, expiry_date, condition, coupon_type } = coupon;
     
     const handleCopyCode = (code) => {
@@ -16,7 +18,7 @@ const DetailsCard = ({ coupon }) => {
             })
     }
     const handleUseNow = () => {
-        window.open("https://musicmax.eu", "_blank")
+        window.open(`${shop_Link}`, "_blank")
     }
 
     
@@ -25,7 +27,7 @@ const DetailsCard = ({ coupon }) => {
 
             <div className=''>
                 <h1 className='text-lg font-semibold'>Coupons: </h1>
-                <ul className='ml-8 md:min-h-44 list-disc'>
+                <ul className='ml-8 md:min-h-48 list-disc'>
                     <li>{coupon_code}</li>
                     <li>{description}</li>
                     <li>{expiry_date}</li>
@@ -45,4 +47,5 @@ export default DetailsCard;
 
 DetailsCard.propTypes = {
     coupon: PropTypes.object,
+    brands : PropTypes.object
 }

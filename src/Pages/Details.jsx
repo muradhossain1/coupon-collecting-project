@@ -31,7 +31,7 @@ const Details = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
                 {
-                    coupons.map((coupon, index) => <DetailsCard key={index} coupon={coupon}></DetailsCard>)
+                    coupons.map((coupon, index) => <DetailsCard key={index} coupon={coupon} brands={brands} ></DetailsCard>)
                 }
             </div>
         </div>

@@ -1,8 +1,14 @@
 import 'animate.css';
+import { useEffect, useState } from 'react';
 
 const Banner = () => {
+    const [useAnimate, setUseAnimate] = useState(false);
+
+    useEffect(() => {
+        setUseAnimate(true);
+    }, [])
     return (
-        <div className="mt-6 p-6 border rounded-xl md:w-2/3 mx-auto animate__animated animate__heartBeat  ">
+        <div className={`mt-6 p-6 border rounded-xl md:w-2/3 mx-auto ${useAnimate ? 'animate__animated animate__heartBeat' : ''}`}>
             <div className="carousel ">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img
