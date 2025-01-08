@@ -11,12 +11,12 @@ The app can be used on various devices, offering real-time updates on available 
 - **Frontend:** React.js (for building the user interface)
 - **Authentication:** JWT (for secure login and user session management)
 - **Responsive:** Responsive for all device 
-- **Deployment:** surge (for live deployment)
+- **Deployment:** firebase (for live deployment)
 
 ## Main Features
 - **Detailed Coupon Information** 
 - **Secure Data Management**
-- **Campaigns & Challenges:** 
+- **Campaigns & Challenges** 
 - **Coupon Browsing** 
 - **User Authentication** 
 
@@ -37,7 +37,7 @@ Follow these steps to set up and run the project on your local machine:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/coupon-quest.git
+   git clone https://github.com/muradhossain1/coupon-collecting-project.git
 2. **Install dependencies:**
    ```bash
    cd coupon-quest
