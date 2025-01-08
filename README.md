@@ -9,27 +9,28 @@ The app can be used on various devices, offering real-time updates on available 
 
 ## Technologies Used
 - **Frontend:** React.js (for building the user interface)
-- **Backend:** Node.js with Express (for handling requests and managing data)
-- **Database:** MongoDB (for storing user data, coupon information, and campaign details)
 - **Authentication:** JWT (for secure login and user session management)
-- **Deployment:** Heroku (for live deployment)
+- **Responsive:** Responsive for all device 
+- **Deployment:** surge (for live deployment)
 
 ## Main Features
-- **Coupon Search:** Users can search for available coupons by category, store, or discount type.
-- **Coupon Redemption:** Redeem coupons directly through the platform.
-- **Campaigns & Challenges:** Engage in special campaigns and challenges to earn bonus rewards.
-- **User Profiles:** Create and manage a personal profile to track collected coupons and redeemed rewards.
-- **Notifications:** Get notified when new coupons are available or when a campaign is about to expire.
-- **Social Sharing:** Share coupons or rewards with friends directly from the app.
+- **Detailed Coupon Information** 
+- **Secure Data Management**
+- **Campaigns & Challenges:** 
+- **Coupon Browsing** 
+- **User Authentication** 
+
 
 ## Dependencies
-- **React** - for building interactive UIs.
-- **Redux** - for state management across the application.
-- **Express** - for creating the backend server.
-- **MongoDB** - to store coupon data and user information.
-- **JWT (JSON Web Tokens)** - for secure user authentication.
-- **Axios** - for making API requests.
-- **Bootstrap** - for styling the components with responsive design.
+- **React**
+- **firebase**
+- **react-router-dom**
+- **react-icons** 
+- **react-toastify**
+- **react-fast-marquee**
+- **react-copy-to-clipboard**
+- **animate-css**
+- **prop-types**
 
 ## How to Run the Project Locally
 Follow these steps to set up and run the project on your local machine:
